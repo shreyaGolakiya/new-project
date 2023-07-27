@@ -1,0 +1,22 @@
+.Header{
+    background-color: antiquewhite;
+}
+.card{
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.sidebar{
+    height: 100vh;
+    background-color: bisque;
+}
+.error_msg{
+    color: rgb(203, 58, 58);
+    font-size: 14px;
+    display: block;
+}
+.form_custom{
+    overflow: hidden;
+}

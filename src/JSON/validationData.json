@@ -1,0 +1,130 @@
+[
+    {
+        "name" : "fname",
+        "conditions" : [
+            {
+                "condition" : "!obj.fname || obj.fname == ''",
+                "error" : "First Name is required"
+            },
+            {
+                "condition" : "obj.fname && !letters.test(obj.fname)",
+                "error" : "First name contains only alphabets."
+            }
+        ]
+    },
+    {
+        "name" : "lname",
+        "conditions" : [
+            {
+                "condition" : "!obj.lname || obj.lname == ''",
+                "error" : "Last Name is required"
+            },
+            {
+                "condition" : "obj.lname && !letters.test(obj.lname)",
+                "error" : "Last name contains only alphabets."
+            }
+        ]
+    },
+    {
+        "name" : "email",
+        "conditions" : [
+            {
+                "condition" : "!obj.email || obj.email == ''",
+                "error" : "Email is required"
+            },
+            {
+                "condition" : "obj.email && ((!obj.email.includes('@gmail.com') && !obj.email.includes('@outlook.com')))",
+                "error" : "Email is not valid"
+            }
+        ]
+    },
+    {
+        "name" : "mobile",
+        "conditions" : [
+            {
+                "condition" : "!obj.mobile || obj.mobile == ''",
+                "error" : "Mobile number is required"
+            },
+            {
+                "condition" : "(obj.mobile <= 0) || (obj.mobile.length != 10)",
+                "error" : "Mobile no. is not valid."
+            }
+        ]
+    },
+    {
+        "name" : "gender",
+        "conditions" : [
+            {
+                "condition" : "!obj.gender || obj.gender == ''",
+                "error" : "Gender is required"
+            }
+        ]
+    },
+    {
+        "name" : "hobbies",
+        "conditions" : [
+            {
+                "condition" : "!obj.hobbies || obj.hobbies == ''",
+                "error" : "hobbies is required"
+            },
+            {
+                "condition" : "obj.hobbies.length < 3",
+                "error" : "Please select any 3"
+            }
+        ]
+    },
+    {
+        "name" : "date",
+        "conditions" : [
+            {
+                "condition" : "!obj.date || obj.date == ''",
+                "error" : "Date is required"
+            },
+            {
+                "condition" : "!isDate18orMoreYearsOld(new Date(obj.date).getDate(), new Date(obj.date).getMonth(), new Date(obj.date).getFullYear())",
+                "error" : "Date must be 18th+"
+            }
+        ]
+    },
+    {
+        "name" : "information",
+        "conditions" : [
+            {
+                "condition" : "!obj.information || obj.information == ''",
+                "error" : "Information is required"
+            }
+        ]
+    },
+    {
+        "name" : "password",
+        "conditions" : [
+            {
+                "condition" : "!obj.password || obj.password == ''",
+                "error" : "Password is required"
+            },
+            {
+                "condition" : "(obj.password != obj.confirmPassword) && (obj.confirmPassword != '')",
+                "error" : "Password and Confirm Password must be same.",
+                "otherField" : "confirmPassword"
+            },
+            {
+                "condition" : "(obj.password == obj.confirmPassword) && (obj.confirmPassword != '')",
+                "error" : "",
+                "otherField" : "confirmPassword"
+            }
+        ]
+    },
+    {
+        "name" : "confirmPassword",
+        "conditions" : [
+            {
+                "condition" : "!obj.confirmPassword || obj.confirmPassword == ''",
+                "error" : "Confirm Password is required"
+            },
+            {
+                "condition" : "(obj.password != obj.confirmPassword) && (obj.confirmPassword != '')",
+                "error" : "Password and Confirm Password must be same."
+            }
+        ]
+    }
+]

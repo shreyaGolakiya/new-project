@@ -1,0 +1,11 @@
+.h1{
+    font-size: 30px;
+    color: green;
+}
+.main {
+    color: chartreuse;
+    &_div{
+        background-color: aquamarine;
+        color: black;
+    }
+}
